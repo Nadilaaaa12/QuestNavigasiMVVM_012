@@ -17,7 +17,7 @@ fun DetailMahasiswaView(
     dataMhs: Mahasiswa,
     onBackButton: () -> Unit,
     modifier: Modifier = Modifier
-){
+) {
     val listDataMhs = listOf(
         Pair("Nama", dataMhs.nama),
         Pair("Gender", dataMhs.gender),
@@ -28,18 +28,26 @@ fun DetailMahasiswaView(
         modifier = modifier
             .fillMaxSize()
             .padding(16.dp)
-    ){
+    ) {
+
         listDataMhs.forEach { data ->
-            DetailMhs(judul = data.first,
-                isi = data.second)
+            DetailMhs(
+                judul = data.first,
+                isi = data.second
+            )
+        }
+
+        Button(
+            onClick = { onBackButton() },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 16.dp)
+        ) {
+            Text(text = "Kembali")
         }
     }
-    Button(
-        onClick = {onBackButton()}
-    ) {
-        Text(text = "Kembali")
-    }
 }
+
 
 @Composable
 fun DetailMhs(

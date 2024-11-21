@@ -20,9 +20,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             SimpleViewModelTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                    Navigasi(
+
                     )
                 }
             }
