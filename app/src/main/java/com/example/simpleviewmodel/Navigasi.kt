@@ -37,7 +37,9 @@ fun Navigasi(
         ) {
             composable(route = Halaman.Form.name) {
                 val konteks = LocalContext.current
+                FormMahasiswaView(
 
+                )
             }
 
         }
